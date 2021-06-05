@@ -1,0 +1,35 @@
+﻿@model PTPMQL.Models.DichVu
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DichVu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DoAn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoAn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaiTri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaiTri)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PhongNghi }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

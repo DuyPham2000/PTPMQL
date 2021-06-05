@@ -1,0 +1,43 @@
+﻿@model PTPMQL.Models.DanhGia
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DanhGia</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoSao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoSao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TiengAnh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TiengAnh)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

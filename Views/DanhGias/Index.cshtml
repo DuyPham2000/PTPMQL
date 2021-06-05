@@ -1,0 +1,55 @@
+﻿@model IEnumerable<PTPMQL.Models.DanhGia>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Đánh Giá</h2>
+
+<p>
+    @Html.ActionLink("Thêm", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoSao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TiengAnh)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoSao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TiengAnh)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaID })
+        </td>
+    </tr>
+}
+
+</table>
